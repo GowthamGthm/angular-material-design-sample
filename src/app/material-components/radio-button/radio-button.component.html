@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form">
+  <mat-radio-group formControlName="radio" (change)="changeGroup($event)" [(ngModel)]="selectedValue">
+  <mat-radio-button value="1" labelPosition="after" (change)="changeButton($event)">Option 1</mat-radio-button>
+  <mat-radio-button value="2" labelPosition="before" (change)="changeButton($event)">Option 2</mat-radio-button>
+</mat-radio-group>
+</form>
+  </mat-card-content>
+</mat-card>

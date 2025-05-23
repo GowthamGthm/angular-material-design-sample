@@ -1,0 +1,8 @@
+<app-input [form]="form" (reset)="resetControl($event)"></app-input>
+<app-textarea [form]="form" (reset)="resetControl($event)"></app-textarea>
+<app-select [form]="form" (reset)="resetControl($event)"></app-select>
+<app-checkbox [form]="form"></app-checkbox>
+<app-radio-button [form]="form"></app-radio-button>
+<app-slide [form]="form"></app-slide>
+<app-slider [form]="form"></app-slider>
+<pre>{{form.value | json}}</pre>

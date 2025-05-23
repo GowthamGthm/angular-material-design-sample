@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-checkbox 
+      formControlName="checkbox"
+      labelPosition="before"
+      [disabled]="disableControl"
+      (change)="change($event)">Check me!</mat-checkbox>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="disable()" mat-raised-button>
+    {{disableControl ? 'Enable' : 'Disable'}}
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,16 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Cobalt2",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  // "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "explorer.confirmDelete": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}
