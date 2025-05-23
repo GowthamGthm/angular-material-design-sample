@@ -120,7 +120,7 @@ export class SelectComponent implements OnInit {
     this.reset.emit('select');
   }
 
-  openedChange() {
+  openedChange(event : any) {
     console.log('Select tag toggled!')
   }
 
