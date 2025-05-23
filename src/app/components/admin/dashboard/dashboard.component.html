@@ -1,8 +1,24 @@
-<app-input [form]="form" (reset)="resetControl($event)"></app-input>
-<app-textarea [form]="form" (reset)="resetControl($event)"></app-textarea>
-<app-select [form]="form" (reset)="resetControl($event)"></app-select>
-<app-checkbox [form]="form"></app-checkbox>
-<app-radio-button [form]="form"></app-radio-button>
-<app-slide [form]="form"></app-slide>
-<app-slider [form]="form"></app-slider>
-<pre>{{form.value | json}}</pre>
+<div class="main-div-p" id="main-div-p">
+  <app-input [form]="form" (reset)="resetControl($event)"></app-input>
+  <app-textarea [form]="form" (reset)="resetControl($event)"></app-textarea>
+  <app-select [form]="form" (reset)="resetControl($event)"></app-select>
+  <app-checkbox [form]="form"></app-checkbox>
+  <app-radio-button [form]="form"></app-radio-button>
+  <app-slide [form]="form"></app-slide>
+  <app-slider [form]="form"></app-slider>
+  <pre>{{form.value | json}}</pre>
+
+
+  <!-- <button class="button-p" type="button" (click)="print()">Print</button> -->
+</div>
+
+ <button class="button-p" type="button" 
+ [useExistingCss]="true" 
+ [closeWindow]="true"
+ printTitle="DOC-POLICY-9544"
+ [openNewTab]="false"
+ printSectionId="main-div-p" ngxPrint>Print NGX</button>
+
+
+
+ <!-- [previewOnly]="true" -->

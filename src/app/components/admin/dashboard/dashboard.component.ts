@@ -10,6 +10,7 @@ import { CheckboxComponent } from '../../../material-components/checkbox/checkbo
 import { RadioButtonComponent } from '../../../material-components/radio-button/radio-button.component';
 import { SlideComponent } from '../../../material-components/slide/slide.component';
 import { CommonModule } from '@angular/common';
+import { NgxPrintModule } from 'ngx-print';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,7 +25,8 @@ import { CommonModule } from '@angular/common';
     SelectComponent,
     CheckboxComponent,
     RadioButtonComponent,
-    SlideComponent
+    SlideComponent,
+    NgxPrintModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
@@ -57,5 +59,10 @@ export class DashboardComponent implements OnInit {
   resetControl(control: string) {
     this.form?.get(control)?.reset('');
   }
+
+  print() {
+    alert("print");
+  }
+
 
 }

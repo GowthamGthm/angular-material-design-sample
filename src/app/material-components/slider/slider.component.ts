@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { materialModules } from '../../material';
@@ -22,7 +22,13 @@ export class SliderComponent implements OnInit {
 
   disableControl: boolean = false;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { 
+
+     this.form = this.fb.group({
+      slider: [50]  // Default value
+    });
+    
+  }
 
   ngOnInit() {
   }
