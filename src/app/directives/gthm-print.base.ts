@@ -11,7 +11,7 @@ export class GthmPrintBase {
     private _printStyle: string[] = [];
     private _styleSheetFile: string = '';
 
-  constructor(@Inject(CSP_NONCE) @Optional() private nonce?: string | null) {}
+    constructor(@Inject(CSP_NONCE) @Optional() private nonce?: string | null) { }
 
     //#region Getters and Setters
     /**
@@ -38,7 +38,7 @@ export class GthmPrintBase {
      * -join/replace to transform an array objects to css-styled string
      */
     public returnStyleValues() {
-      const styleNonce = this.nonce ? ` nonce="${this.nonce}"` : '';
+        const styleNonce = this.nonce ? ` nonce="${this.nonce}"` : '';
         return `<style${styleNonce}> ${this._printStyle.join(' ').replace(/,/g, ';')} </style>`;
     }
 
@@ -214,7 +214,9 @@ export class GthmPrintBase {
             return;
         }
 
-        const popupWin = window.open("", "_blank", popOut);
+        const url = window?.location?.href || "";
+        console.log("URL ====> " + url);
+        const popupWin = window.open(url, "_blank", popOut);
 
         if (!popupWin) {
             // the popup window could not be opened.
@@ -231,6 +233,20 @@ export class GthmPrintBase {
               ${this.returnStyleValues()}
               ${this.returnStyleSheetLinkTags()}
               ${styles}
+               <style>
+                    @media print {
+                        body::after {
+                        content: "Printed from: ${url}";
+                        display: block;
+                        position: fixed;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: left;
+                        font-size: 10px;
+                        color: #999;
+                        }
+                    }
+               </style>
               ${links}
             </head>
             <body ${printOptions.bodyClass ? `class="${printOptions.bodyClass}"` : ''}>
