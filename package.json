@@ -22,11 +22,11 @@
     "@angular/router": "^17.3.0",
     "@ngrx/store": "^17.2.0",
     "ngx-cookie-service": "^17.1.0",
-    "ngx-print": "^3.0.0",
     "prettier": "^3.2.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.14.3",
+    "ngx-print": "^3.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.7",

@@ -11,6 +11,7 @@ import { RadioButtonComponent } from '../../../material-components/radio-button/
 import { SlideComponent } from '../../../material-components/slide/slide.component';
 import { CommonModule } from '@angular/common';
 import { NgxPrintModule } from 'ngx-print';
+import { GthmPrintDirective } from '../../../directives/gthm-print.directive';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,7 +27,8 @@ import { NgxPrintModule } from 'ngx-print';
     CheckboxComponent,
     RadioButtonComponent,
     SlideComponent,
-    NgxPrintModule
+    NgxPrintModule,
+    GthmPrintDirective
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
