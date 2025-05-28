@@ -13,7 +13,6 @@ export class GthmPrintBase {
 
     constructor(@Inject(CSP_NONCE) @Optional() private nonce?: string | null) { }
 
-    //#region Getters and Setters
     /**
      * Sets the print styles based on the provided values.
      *
@@ -31,7 +30,6 @@ export class GthmPrintBase {
 
     /**
      *
-     *
      * @returns the string that create the stylesheet which will be injected
      * later within <style></style> tag.
      *
@@ -42,10 +40,9 @@ export class GthmPrintBase {
         return `<style${styleNonce}> ${this._printStyle.join(' ').replace(/,/g, ';')} </style>`;
     }
 
-    /**
+   /**
    * @returns string which contains the link tags containing the css which will
    * be injected later within <head></head> tag.
-   *
    */
     private returnStyleSheetLinkTags() {
         return this._styleSheetFile;
@@ -70,9 +67,6 @@ export class GthmPrintBase {
         }
     }
 
-    //#endregion
-
-    //#region Private methods used by PrintBase
 
     /**
      * Updates the default values for input elements.
@@ -182,8 +176,6 @@ export class GthmPrintBase {
         }
         return html.join('\r\n');
     }
-    //#endregion
-
 
     /**
      * Prints the specified content using the provided print options.
@@ -267,4 +259,6 @@ export class GthmPrintBase {
           </html>`);
         popupWin.document.close();
     }
+
+
 }

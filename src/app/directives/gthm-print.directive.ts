@@ -108,5 +108,5 @@ export class GthmPrintDirective extends GthmPrintBase {
   public override print(): void {
     super.print(this.printOptions);
   }
-  
+
 }
